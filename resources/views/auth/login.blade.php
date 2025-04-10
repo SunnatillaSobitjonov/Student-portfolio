@@ -18,7 +18,7 @@
 
       <div class="flex items-start flex-col justify-start">
         <label for="password" class="text-sm text-gray-700 dark:text-gray-200 mr-2">Password:</label>
-        <input type="password" id="password" name="password" class="w-full px-3 text-gray-900 dark:bg-gray-900 py-2 rounded-md border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-1 focus:ring-blue-500">
+        <input type="password" id="password" name="password" class="w-full px-3 text-gray-900 dark:bg-gray-900 dark:text-white py-2 rounded-md border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-1 focus:ring-blue-500">
       </div>
 
 

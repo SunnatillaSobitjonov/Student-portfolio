@@ -39,10 +39,29 @@ class LoginController extends Controller
         return redirect('/');
     
     }
+
+    public function showLoginForm()
+    {
+        return view('auth.login');  // login sahifasini ko'rsatish
+    }
+
+    public function login(Request $request)
+    {
+        $credentials = $request->only('email', 'password');
+
+        if (Auth::attempt($credentials)) {
+            // Authentication passed
+            return redirect()->intended('dashboard');
+        }
+
+        return back()->withErrors([
+            'email' => 'The provided credentials do not match our records.',
+        ]);
+    }
+
     public function logout()
     {
         Auth::logout();
-        
-        return redirect('/');
+        return redirect()->route('login');
     }
 }
